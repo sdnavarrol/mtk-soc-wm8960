@@ -1,4 +1,5 @@
 OPENWRT = ${HOME}/irt/hdl/openwrt
+BUILD_DIR=${PKG_BUILD_DIR}
 KERNEL = ${OPENWRT}/build_dir/target-mipsel_24kc_musl/linux-ramips_mt76x8/linux-4.14.63
 #KERNEL = ${HOME}/irt/hdl/linux-4.14.63
 STAGING_DIR = ${OPENWRT}/staging_dir/
@@ -38,4 +39,4 @@ obj-m += i2c_wm8960.o mtk_ralink_gdma.o snd-soc-mt76xx-machine.o
 obj-m += snd-soc-wm8960.o
 
 all:
-	make -C ${KERNEL} ARCH="mips" CC="${OPENWRT}/staging_dir/toolchain-mipsel_24kc_gcc-7.3.0_musl/bin/mipsel-openwrt-linux-musl-gcc"  M=$(PWD) modules
+	make -C ${KERNEL} ARCH="mips" CC="mipsel-openwrt-linux-musl-gcc"  M=$(BUILD_DIR) modules
