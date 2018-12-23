@@ -39,9 +39,3 @@ obj-m += snd-soc-wm8960.o
 
 all:
 	make -C ${KERNEL} ARCH="mips" CC="${OPENWRT}/staging_dir/toolchain-mipsel_24kc_gcc-7.3.0_musl/bin/mipsel-openwrt-linux-musl-gcc"  M=$(PWD) modules
-
-clean:
-	make -C ${KERNEL} CC="${OPENWRT}/staging_dir/toolchain-mipsel_24kc_gcc-7.3.0_musl/bin/mipsel-openwrt-linux-musl-gcc"  M=$(PWD) clean
-
-transfer:
-	scp *.ko .asoundrc *.wav run.sh root@192.168.2.1:~
