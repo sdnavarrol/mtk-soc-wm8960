@@ -37,7 +37,7 @@ snd-soc-wm8960-objs := wm8960.o
 obj-m += i2c_wm8960.o mtk_ralink_gdma.o snd-soc-mt76xx-machine.o
 obj-m += snd-soc-wm8960.o
 
-all: clean build
+all: build
 
 build:
 	make -C ${KERNEL} ARCH="mips" CC="${OPENWRT}/staging_dir/toolchain-mipsel_24kc_gcc-7.3.0_musl/bin/mipsel-openwrt-linux-musl-gcc"  M=$(PWD) modules
