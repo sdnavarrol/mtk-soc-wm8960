@@ -39,4 +39,4 @@ obj-m += i2c_wm8960.o mtk_ralink_gdma.o snd-soc-mt76xx-machine.o
 obj-m += snd-soc-wm8960.o
 
 all:
-	make -C ${KERNEL_BUILD_DIR} ARCH="mips" CC="mipsel-openwrt-linux-musl-gcc"  M=$(PKG_BUILD_DIR) modules
+	make -C ${KERNEL} ARCH="mips" CC="mipsel-openwrt-linux-musl-gcc"  M=${PWD} modules
