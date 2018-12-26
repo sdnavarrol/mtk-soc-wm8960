@@ -9,6 +9,14 @@
 #include "aec/aec_api.h"
 #endif
 
+
+
+#define RALINK_SYSCTL_BASE=0xB0000000
+#define RALINK_INTCL_BASE=0xB0000200
+#define RALINK_PIO_BASE=0xB0000600
+#define RALINK_I2S_BASE=0xB0000A00
+#define RALINK_GDMA_BASE=0xB0002800
+
 #define I2S_MAX_DEV			1
 #define I2S_MOD_VERSION			"0.1"
 #define phys_to_bus(a) (a & 0x1FFFFFFF)
@@ -525,4 +533,3 @@ u32 i2s_mmap_phys_addr(i2s_config_type* ptri2s_config);
 #define I2SDRV_DEVNAME		"i2s0"
 
 #endif /* __RALINK_I2S_H_ */
-
