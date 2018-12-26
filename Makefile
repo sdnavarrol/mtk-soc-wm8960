@@ -7,7 +7,7 @@
 #LD=${OPENWRT}/staging_dir/toolchain-mipsel_24kc_gcc-7.3.0_musl/bin/mipsel-openwrt-linux-musl-ld
 #CROSS_COMPILE="mipsel-openwrt-linux-musl-"
 #EXTRA_LDSFLAGS="-I${OPENWRT}/build_dir/target-mipsel_24kc_musl/linux-ramips_mt76x8"
-KBUILD_HAVE_NLS=no
+#KBUILD_HAVE_NLS=no
 #CONFIG_SHELL="/bin/bash"
 KBUILD_CFLAGS += -DCONFIG_MT7628
 #KBUILD_CFLAGS += -DCONFIG_RALINK_MT7628
