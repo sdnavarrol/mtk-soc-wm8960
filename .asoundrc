@@ -1,0 +1,32 @@
+pcm.sndcard {
+    type hw
+    card 0
+    device 0
+}
+
+# playback PCM device: using subdevice 0,0
+pcm.amix {
+  type dmix
+  ipc_key 219345
+  slave.pcm sndcard
+}
+
+# capture PCM device: using loopback subdevice 0,1
+pcm.asnoop {
+  type dsnoop
+  ipc_key 219346
+  slave.pcm sndcard
+}
+
+# duplex device combining our PCM devices defined above
+pcm.aduplex {
+  type asym
+  playback.pcm "amix"
+  capture.pcm "asnoop"
+}
+
+# default device
+pcm.!default {
+  type plug
+  slave.pcm "aduplex"
+}
