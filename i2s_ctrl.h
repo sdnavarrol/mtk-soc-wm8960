@@ -9,6 +9,9 @@
 #include "aec/aec_api.h"
 #endif
 
+#define RALINK_SYSCTL_BASE 0xB0000000
+
+
 #define I2S_MAX_DEV			1
 #define I2S_MOD_VERSION			"0.1"
 #define phys_to_bus(a) (a & 0x1FFFFFFF)
