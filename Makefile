@@ -1,14 +1,14 @@
-OPENWRT = ${HOME}/irt/hdl/openwrt
+#OPENWRT = ${HOME}/irt/hdl/openwrt
 #BUILD_DIR=${PKG_BUILD_DIR}/$(PKG_NAME)-$(PKG_VERSION)
-KERNEL = ${OPENWRT}/build_dir/target-mipsel_24kc_musl/linux-ramips_mt76x8/linux-4.14.63
-PACKAGE_BUILD_DIR=${KERNEL}/mtk-soc-wm8960-1.0.0
+#KERNEL = ${OPENWRT}/build_dir/target-mipsel_24kc_musl/linux-ramips_mt76x8/linux-4.14.63
+#PACKAGE_BUILD_DIR=${KERNEL}/mtk-soc-wm8960-1.0.0
 #KERNEL = ${HOME}/irt/hdl/linux-4.14.63
-STAGING_DIR = ${OPENWRT}/staging_dir/
-LD=${OPENWRT}/staging_dir/toolchain-mipsel_24kc_gcc-7.3.0_musl/bin/mipsel-openwrt-linux-musl-ld
-CROSS_COMPILE="mipsel-openwrt-linux-musl-"
-EXTRA_LDSFLAGS="-I${OPENWRT}/build_dir/target-mipsel_24kc_musl/linux-ramips_mt76x8"
+#STAGING_DIR = ${OPENWRT}/staging_dir/
+#LD=${OPENWRT}/staging_dir/toolchain-mipsel_24kc_gcc-7.3.0_musl/bin/mipsel-openwrt-linux-musl-ld
+#CROSS_COMPILE="mipsel-openwrt-linux-musl-"
+#EXTRA_LDSFLAGS="-I${OPENWRT}/build_dir/target-mipsel_24kc_musl/linux-ramips_mt76x8"
 KBUILD_HAVE_NLS=no
-CONFIG_SHELL="/bin/bash"
+#CONFIG_SHELL="/bin/bash"
 KBUILD_CFLAGS += -DCONFIG_MT7628
 #KBUILD_CFLAGS += -DCONFIG_RALINK_MT7628
 KBUILD_CFLAGS += -DRALINK_SYSCTL_BASE=0xB0000000
