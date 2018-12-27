@@ -36,7 +36,6 @@
 
 //#include <asm/rt2880/rt_mmap.h>
 
-#define CONFIG_RALINK_MT7628
 
 /*
  * DEFINITIONS AND MACROS
