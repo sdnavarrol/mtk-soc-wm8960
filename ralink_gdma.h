@@ -53,6 +53,8 @@
 #error Please Choose System Type
 #endif
 
+#define SURFBOARDINT_DMA 15
+#define RALINK_INTCTL_DMA 128
 
 #define RALINK_GDMA_BASE 0xB0002800
 #define RALINK_INTCL_BASE 0xB0000200
